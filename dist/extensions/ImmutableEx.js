@@ -10,12 +10,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 var ImmutableEx = function ImmutableEx() {
   _classCallCheck(this, ImmutableEx);
+};
 
-  this.splitIntoChunks = function (list, chunkSize) {
-    return (0, _immutable.Range)(0, list.count(), chunkSize).map(function (chunkStart) {
-      return list.slice(chunkStart, chunkStart + chunkSize);
-    });
-  };
+ImmutableEx.splitIntoChunks = function (list, chunkSize) {
+  return (0, _immutable.Range)(0, list.count(), chunkSize).map(function (chunkStart) {
+    return list.slice(chunkStart, chunkStart + chunkSize);
+  });
 };
 
 exports.default = ImmutableEx;
