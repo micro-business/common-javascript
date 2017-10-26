@@ -18,4 +18,36 @@ ImmutableEx.splitIntoChunks = function (list, chunkSize) {
   });
 };
 
+ImmutableEx.removeUndefinedProps = function (obj) {
+  if (typeof obj === 'undefined') {
+    return obj;
+  }
+
+  return (0, _immutable.isImmutable)(obj) ? obj.filter(function (val) {
+    return typeof ImmutableEx.removeUndefinedProps(val) !== 'undefined';
+  }).map(function (val) {
+    return ImmutableEx.removeUndefinedProps(val);
+  }) : obj;
+};
+
+ImmutableEx.removeNullProps = function (obj) {
+  if (obj === null) {
+    return obj;
+  }
+
+  return (0, _immutable.isImmutable)(obj) ? obj.filter(function (val) {
+    return ImmutableEx.removeNullProps(val) !== null;
+  }).map(function (val) {
+    return ImmutableEx.removeNullProps(val);
+  }) : obj;
+};
+
+ImmutableEx.removeNullAndUndefinedProps = function (obj) {
+  if (typeof obj === 'undefined' || obj === null) {
+    return obj;
+  }
+
+  return ImmutableEx.removeUndefinedProps(ImmutableEx.removeNullProps(obj));
+};
+
 exports.default = ImmutableEx;
