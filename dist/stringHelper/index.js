@@ -15,7 +15,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var StringHelper = function StringHelper() {
   _classCallCheck(this, StringHelper);
 
-  this.convertStringArgumentSet = function (text) {
+  this.convertStringArgumentToSet = function (text) {
     var convertToLowerCase = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
 
     if (text) {
