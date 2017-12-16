@@ -14,26 +14,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 var StringHelper = function StringHelper() {
   _classCallCheck(this, StringHelper);
+};
 
-  this.convertStringArgumentToSet = function (text) {
-    var convertToLowerCase = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+StringHelper.convertStringArgumentToSet = function (text) {
+  var convertToLowerCase = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
 
-    if (text) {
-      var trimmedText = text.trim();
+  if (text) {
+    var trimmedText = text.trim();
 
-      if (trimmedText.length === 0) {
-        return (0, _immutable.Set)();
-      }
-
-      return _immutable2.default.fromJS((convertToLowerCase ? trimmedText.toLowerCase() : trimmedText).split(' ')).map(function (_) {
-        return _.trim();
-      }).filter(function (_) {
-        return _.length > 0;
-      }).toSet();
+    if (trimmedText.length === 0) {
+      return (0, _immutable.Set)();
     }
 
-    return (0, _immutable.Set)();
-  };
+    return _immutable2.default.fromJS((convertToLowerCase ? trimmedText.toLowerCase() : trimmedText).split(' ')).map(function (_) {
+      return _.trim();
+    }).filter(function (_) {
+      return _.length > 0;
+    }).toSet();
+  }
+
+  return (0, _immutable.Set)();
 };
 
 exports.default = StringHelper;

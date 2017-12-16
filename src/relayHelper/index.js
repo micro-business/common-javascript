@@ -1,7 +1,7 @@
 // @flow
 
 export default class RelayHelper {
-  getLimitAndSkipValue = (searchArgs, count, defaultPageSize, maximumPageSize) => {
+  static getLimitAndSkipValue = (searchArgs, count, defaultPageSize, maximumPageSize) => {
     const after = searchArgs.get('after');
     const before = searchArgs.get('before');
     let first = searchArgs.get('first');

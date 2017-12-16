@@ -3,7 +3,7 @@
 import Immutable, { Set } from 'immutable';
 
 export default class StringHelper {
-  convertStringArgumentToSet = (text, convertToLowerCase = true) => {
+  static convertStringArgumentToSet = (text, convertToLowerCase = true) => {
     if (text) {
       const trimmedText = text.trim();
 
