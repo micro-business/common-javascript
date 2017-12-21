@@ -1,5 +1,5 @@
 {
-  "name": "@microbusiness/micro-business-common-javascript",
+  "name": "@microbusiness/common-javascript",
   "version": "1.1.4",
   "description": "Micro Business Common JavaScript",
   "main": "./dist/index.js",
