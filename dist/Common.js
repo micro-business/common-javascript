@@ -14,8 +14,12 @@ Common.isUndefined = function (value) {
   return typeof value === 'undefined';
 };
 
+Common.isNull = function (value) {
+  return value === null;
+};
+
 Common.isNullOrUndefined = function (value) {
-  return Common.isUndefined(value) || value === null;
+  return Common.isUndefined(value) || Common.isNull(value);
 };
 
 exports.default = Common;
