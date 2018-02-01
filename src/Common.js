@@ -1,5 +1,7 @@
 // @flow
 
 export default class Common {
-  static isNullOrUndefined = value => typeof value === 'undefined' || value === null;
+  static isUndefined = value => typeof value === 'undefined';
+
+  static isNullOrUndefined = value => Common.isUndefined(value) || value === null;
 }

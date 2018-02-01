@@ -10,8 +10,12 @@ var Common = function Common() {
   _classCallCheck(this, Common);
 };
 
+Common.isUndefined = function (value) {
+  return typeof value === 'undefined';
+};
+
 Common.isNullOrUndefined = function (value) {
-  return typeof value === 'undefined' || value === null;
+  return Common.isUndefined(value) || value === null;
 };
 
 exports.default = Common;
