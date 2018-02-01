@@ -1,6 +1,6 @@
 {
   "name": "@microbusiness/common-javascript",
-  "version": "1.1.9",
+  "version": "1.1.10",
   "description": "Micro Business Common JavaScript",
   "main": "./dist/index.js",
   "scripts": {

@@ -10,4 +10,6 @@ export default class Common {
   static isNotNull = value => !Common.isNull(value);
 
   static isNullOrUndefined = value => Common.isUndefined(value) || Common.isNull(value);
+
+  static isNotNullAndUndefined = value => Common.isNotUndefined(value) && Common.isNotNull(value);
 }

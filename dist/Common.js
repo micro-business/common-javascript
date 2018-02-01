@@ -30,4 +30,8 @@ Common.isNullOrUndefined = function (value) {
   return Common.isUndefined(value) || Common.isNull(value);
 };
 
+Common.isNotNullAndUndefined = function (value) {
+  return Common.isNotUndefined(value) && Common.isNotNull(value);
+};
+
 exports.default = Common;
