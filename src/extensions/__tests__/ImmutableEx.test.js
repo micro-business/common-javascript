@@ -1,7 +1,7 @@
 // @flow
 
 import Immutable from 'immutable';
-import { ImmutableEx } from '../';
+import { ImmutableEx } from '..';
 
 describe('removeUndefinedProps', () => {
   test('should remove undefined objects in map', () => {

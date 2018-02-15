@@ -34,4 +34,8 @@ Common.isNotNullAndUndefined = function (value) {
   return Common.isNotUndefined(value) && Common.isNotNull(value);
 };
 
+Common.isDecimal = function (strValue) {
+  return !isNaN(parseFloat(strValue)) && isFinite(strValue);
+};
+
 exports.default = Common;

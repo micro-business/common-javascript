@@ -12,4 +12,6 @@ export default class Common {
   static isNullOrUndefined = value => Common.isUndefined(value) || Common.isNull(value);
 
   static isNotNullAndUndefined = value => Common.isNotUndefined(value) && Common.isNotNull(value);
+
+  static isDecimal = strValue => !isNaN(parseFloat(strValue)) && isFinite(strValue);
 }

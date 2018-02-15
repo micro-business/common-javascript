@@ -1,6 +1,6 @@
 'use strict';
 
-var _ = require('../');
+var _ = require('..');
 
 describe('isNullOrUndefined', function () {
   test('should return true if undefined provided', function () {

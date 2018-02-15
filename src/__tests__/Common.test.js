@@ -1,4 +1,4 @@
-import { Common } from '../';
+import { Common } from '..';
 
 describe('isNullOrUndefined', () => {
   test('should return true if undefined provided', () => {
